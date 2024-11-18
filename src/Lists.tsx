@@ -5,7 +5,7 @@ import { Media } from './types';
 
 const Lists = () => {
   const [activeTab, setActiveTab] = useState<'watchlist' | 'favorites' | 'watched'>('watchlist');
-  const { lists, removeFromList, addToList } = useUserLists();
+  const { lists, removeFromList } = useUserLists();
   const navigate = useNavigate();
 
   const handleTabClick = (tab: 'watchlist' | 'favorites' | 'watched') => {
